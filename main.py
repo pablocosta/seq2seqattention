@@ -103,5 +103,5 @@ for i in range(1, epochs+1):
     for ( batch , (input_batch, output_batch)) in enumerate(dataset.take(steps_per_epoch)):
         batch_loss = train_step(input_batch, output_batch, encoder_initial_cell_state)
         total_loss += batch_loss
-    if (batch+1)%5 == 0:
-        print("total loss: {} epoch {} ".format(total_loss.numpy(), i))
+    
+    print("total loss: {} epoch {} ".format(total_loss.numpy(), i))
